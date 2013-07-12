@@ -1,0 +1,27 @@
+@mixin icon($class, $unicode) {
+  .#{$class}.icon:before {
+    content: "\e#{$unicode}";
+  }
+}
+
+/* Basic icon element preparation */
+.icon {
+  &:before {
+    content: '';
+    display: inline-block;
+    font-family: "NavIcons";
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+  }
+
+  &.large:before {
+    font-size: percentage(4/3);
+  }
+}
+
+@include icon("twitter", "000");
+@include icon("sponsors", "001");
+@include icon("map", "002");
+@include icon("calendar", "003");
+@include icon("at", "004");

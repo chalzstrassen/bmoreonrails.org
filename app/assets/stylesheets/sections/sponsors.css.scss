@@ -1,9 +1,14 @@
 #sponsors {
   margin-top: 5em;
+  padding-bottom: 2em;
   text-align: center;
 
   .logos {
     padding-top: 2em;
-    width: 85%
+    width: 85%;
+
+    @include mobile{
+      width: 40%;
+    }
   }
 }

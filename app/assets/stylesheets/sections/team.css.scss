@@ -1,0 +1,51 @@
+#team {
+  padding-top: 5em;
+  position: relative;
+
+  img {
+    display: block;
+  }
+
+  #leader {
+    padding-left: 1em;
+    position: absolute;
+    top: 0;
+    width: percentage(5/9);
+
+    @include mobile {
+      @include clearfix;
+      position: static;
+      width: 100%;
+    }
+
+    img {
+      @include mobile { margin: 0 auto; }
+    }
+
+    h1 {
+      color: $red;
+      font-family: EB Garamond, $serif;
+      font-size: 180%;
+      line-height: 1.25em;
+      padding-top: 1em;
+
+      @include mobile {
+        font-size: 150%;
+      }
+
+      @include tablet {
+        font-size: 125%;
+      }
+    }
+  }
+
+  .pixel {
+    float: left;
+    min-height: 1px;
+    width: percentage(1/9);
+
+    img {
+      width: 100%;
+    }
+  }
+}

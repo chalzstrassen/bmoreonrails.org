@@ -7,12 +7,21 @@
 
   h3 {
     color: $red;
-    font-family: $sans;
+    font-family: Roboto, $sans;
+    font-weight: 700;
     font-size: 145%;
-    margin-bottom: 0.25em;
+    line-height: 1em;
+    margin-bottom: 0.15em;
   }
 
   p {
+    font-family: Roboto, $sans;
+    font-weight: 400;
     margin: 0;
+  }
+
+  p.subtitle {
+    font-family: Roboto, $sans;
+    font-weight: 700;
   }
 }

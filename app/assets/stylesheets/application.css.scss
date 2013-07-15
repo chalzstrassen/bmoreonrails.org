@@ -1,6 +1,7 @@
 @import "lib/global";
 @import "sections/calendar";
 @import "sections/sponsors";
+@import "sections/team";
 
 header {
   background-color: #CD2027;
@@ -45,8 +46,10 @@ header {
 }
 
 article {
+  }
 
   .line {
+    padding-bottom: 2em;
     position: relative;
     text-align: center;
 
@@ -69,28 +72,38 @@ article {
       position: relative;
       z-index: 1;
     }
-
-  }
-
-  #leader {
-    padding: 1.75em;
-
-    h1 {
-    color: $red;
-    font: normal 180% $serif;
-    line-height: 1.25em;
-    padding-top: 1em;
-    }
   }
 
   aside {
 
   }
+
+#map {
+
+  img {
+    display: block;
+  }
+
+  #greymap {
+    display: block;
+    float: none;
+    padding: 0;
+    position: relative;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 625%;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    top: 50px;
+    z-index: 1;
+  }
 }
 
 footer {
   background-color: $red;
-  margin-top: 2em;
 
   a {
     color : $light;
@@ -100,10 +113,14 @@ footer {
 
   p {
   color: $light;
-  line-height: 1.5em;
+  line-height: 3em;
   margin: 0;
   padding: 1em 0em;
   text-align: center;
+
+  @include mobile {
+    line-height: 1.5em;
+  }
   }
 }
 
@@ -120,7 +137,7 @@ footer {
 .row { @include clearfix; }
 
 // Build columns
-$grid-size: 12;
+$grid-size: 18;
 $i: 1;
 @while $i <= $grid-size {
   // .columnx and .spanx both have widths

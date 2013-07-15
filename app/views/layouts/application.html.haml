@@ -11,15 +11,15 @@
         %nav
           %ul
             %li
-              %a.at.icon{href: '/', title: ''}
+              %a.at.icon{href: '/', title: 'Who We Are'}
             %li
-              %a.calendar.icon{href: '/', title: ''}
+              %a.calendar.icon{href: '/', title: 'Upcoming  Events'}
             %li
-              %a.map.icon{href: '/', title: ''}
+              %a.map.icon{href: '/', title: 'Where to Find Us'}
             %li
-              %a.twitter.icon{href: '/', title: ''}
+              %a.twitter.icon{href: '/', title: 'Twitter'}
             %li#join
-              %a{href: '/', title: ''} Join Us on Meetup!
+              %a{href: 'http://www.meetup.com/bmore-on-rails', title: 'Our Meetup Page'} Join Us on Meetup!
 
     %article
       %section#leader
@@ -58,14 +58,26 @@
             .column12.line
               %h2.sponsors.icon
 
+            .column4.first
+              %a{href: 'http://www.mdlogix.com', title: 'mdlogix'}
+                = image_tag 'mdlogix_275.png', alt: 'mdlogix Logo', class: 'logos'
             .column4
-              = image_tag 'mdlogix.png', alt: 'mdlogix Logo', class: 'logos'
+              %a{href: 'http://smartlogicsolutions.com/', title: 'smartlogic'}
+                = image_tag 'smartlogic_275.png', alt: 'Smart Logic Logo', class: 'logos'
             .column4
-              = image_tag 'SmartLogic.png', alt: 'Smart Logic Logo', class: 'logos'
-            .column4
-              = image_tag 'BackForty.png', alt: 'Back Forty Logo', class: 'logos'
+              %a{href: 'http://www.inthebackforty.com/', title: 'Back Forty'}
+                = image_tag 'backforty_275.png', alt: 'Back Forty Logo', class: 'logos'
       = yield
 
     %footer
       %p
-        &copy 2013 B'more on Rails | Website hosted by SmartLogicSolutions | Logo by Charles Martucci/Craftwork | Website Designed by Back Forty
+        &copy 2013 B'more on Rails |
+        %br.mobile-only/
+        Website hosted by
+        %a{href: 'http://smartlogicsolutions.com/', title: 'smartlogic'} SmartLogicSolutions  |
+        %br.mobile-only
+        Logo by
+        %a{href: 'http://charlesmartucci.com/', title: 'Charles Martucci'} Charles Martucci/Craftwork  |
+        %br.mobile-only
+        Website Designed by
+        %a{href: 'http://www.inthebackforty.com/', title: 'Back Forty'} Back Forty

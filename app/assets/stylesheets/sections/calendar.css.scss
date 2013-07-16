@@ -1,6 +1,10 @@
 #calendar {
   margin-top: 5em;
 
+  @include mobile {
+    margin-top: 1.5em;
+  }
+
   h3 {
     @include mobile { padding-top: 1em; }
   }
@@ -9,9 +13,17 @@
     color: $red;
     font-family: Roboto, $sans;
     font-weight: 700;
-    font-size: 145%;
-    line-height: 1em;
+    font-size: 180%;
+    line-height: 1.1em;
     margin-bottom: 0.15em;
+
+    @include mobile {
+      font-size: 105%;
+    }
+
+    @include tablet {
+      font-size: 145%;
+    }
   }
 
   p {
@@ -20,9 +32,24 @@
     margin: 0;
   }
 
+  p.address {
+    color: $red;
+    font-weight: 700;
+  }
+
   p.subtitle {
     font-family: Roboto, $sans;
     font-weight: 700;
+  }
+
+  .column8 {
+    @include mobile {
+      padding-bottom: 3.5em;
+    }
+  }
+
+  .push {
+    padding-top: 2em;
   }
 
   .space {
@@ -33,9 +60,19 @@
     }
   }
 
-  @include mobile {
-    .twitter-timeline {
-    padding-top: 2em;
+  .subspace {
+    padding-top: 1.1em;
+
+    @include tablet {
+      padding-top: 1.5em;
+    }
+  }
+
+  .twitter-timeline {
+    padding-top: 1em;
+
+    @include mobile {
+      margin-top: 2em;
     }
   }
 }

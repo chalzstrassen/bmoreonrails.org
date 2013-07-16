@@ -16,12 +16,16 @@ header {
       margin: 0;
       padding: 0 1.5em;
 
+      @include mobile {
+        padding: 0;
+      }
+
       li {
         display: inline-block;
         padding-right: 2em;
 
           @include mobile {
-            padding-right: 1.25em;
+            padding-right: 0.8em;
           }
 
         a {
@@ -33,11 +37,19 @@ header {
             }
         }
 
+        a:hover {
+          color: lighten($red, 30%);
+        }
+
         &#join {
           float: right;
 
           a {
             font-size: 110%;
+          }
+
+          a:hover {
+            color: lighten($red, 30%);
           }
         }
       }
@@ -49,7 +61,7 @@ article {
   }
 
   .line {
-    padding-bottom: 2em;
+    // padding-bottom: 2em;
     position: relative;
     text-align: center;
 
@@ -90,11 +102,16 @@ article {
 
   position: relative;
 
+  @include mobile {
+    margin-top: -20px;
+  }
+
     #address {
       background-color: $red;
-      padding: 1.5em 1em 1.5em 1em;
+      padding: 1.75em 1em 1.75em 1em;
       position: absolute;
-      top: 23%;
+      top: 30%;
+      width: 35em;
 
       @include mobile { display: none; }
 
@@ -103,20 +120,33 @@ article {
         float: left;
         font-family: Roboto, $sans;
         font-weight: 400;
-        font-size: 100%;
-        line-height: 1.25em;
+        font-size: 105%;
+        line-height: 1.35em;
         margin: 0;
-        padding: 0 1em;
+        padding: 0;
+      }
+
+      .column8 {
+        padding-left: 2em;
       }
 
       .text {
         padding-top: 2em;
+
+        a {
+          color: $light;
+          text-decoration: underline;
+        }
+
+        a:hover {
+          color: lighten($red, 30%);
+        }
       }
     }
 
   .background {
     background-image:url('map.png');
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
     height: 40em;
 
@@ -147,6 +177,10 @@ footer {
     color : $light;
     font-size: 100%;
     text-decoration: underline;
+  }
+
+  a:hover {
+    color: lighten($red, 30%);
   }
 
   p {

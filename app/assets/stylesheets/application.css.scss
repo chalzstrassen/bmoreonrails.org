@@ -53,6 +53,10 @@ article {
     position: relative;
     text-align: center;
 
+    @include mobile {
+      padding-bottom: 0;
+    }
+
    &:before {
       border-bottom: 1px solid $red;
       content: '';
@@ -71,6 +75,10 @@ article {
       padding: 0 0.25em;
       position: relative;
       z-index: 1;
+
+      @include mobile {
+        font-size: 400%;
+      }
     }
   }
 
@@ -78,18 +86,41 @@ article {
 
   }
 
-#map {
+.mapfooter {
 
-  img {
-    display: block;
-  }
+  position: relative;
 
-  #greymap {
-    display: block;
-    float: none;
-    padding: 0;
-    position: relative;
-    width: 100%;
+    #address {
+      background-color: $red;
+      padding: 1.5em 1em 1.5em 1em;
+      position: absolute;
+      top: 23%;
+
+      @include mobile { display: none; }
+
+      p {
+        color: $light;
+        float: left;
+        font-family: Roboto, $sans;
+        font-weight: 400;
+        font-size: 100%;
+        line-height: 1.25em;
+        margin: 0;
+        padding: 0 1em;
+      }
+
+      .text {
+        padding-top: 2em;
+      }
+    }
+
+  .background {
+    background-image:url('map.png');
+    height: 40em;
+
+    @include mobile {
+      height: 20em;
+    }
   }
 
   h2 {
@@ -99,8 +130,13 @@ article {
     text-align: center;
     top: 50px;
     z-index: 1;
+
+    @include mobile {
+      font-size: 500%;
+    }
   }
 }
+
 
 footer {
   background-color: $red;
@@ -118,9 +154,15 @@ footer {
   padding: 1em 0em;
   text-align: center;
 
-  @include mobile {
-    line-height: 1.5em;
-  }
+    .bullet {
+      @include mobile {
+        display: none;
+      }
+    }
+
+    @include mobile {
+      line-height: 1.5em;
+    }
   }
 }
 

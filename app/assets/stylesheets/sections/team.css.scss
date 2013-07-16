@@ -2,18 +2,22 @@
   padding-top: 5em;
   position: relative;
 
+  @include mobile{ padding-top: 1em; }
+
   img {
     display: block;
   }
 
   #leader {
     padding-left: 1em;
+    padding-top: 1em;
     position: absolute;
     top: 0;
     width: percentage(5/9);
 
     @include mobile {
       @include clearfix;
+      padding-top: 0;
       position: static;
       width: 100%;
     }

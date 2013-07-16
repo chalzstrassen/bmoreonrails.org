@@ -24,4 +24,18 @@
     font-family: Roboto, $sans;
     font-weight: 700;
   }
+
+  .space {
+    padding-top: 2em;
+
+    @include mobile {
+      padding-top: 0;
+    }
+  }
+
+  @include mobile {
+    .twitter-timeline {
+    padding-top: 2em;
+    }
+  }
 }

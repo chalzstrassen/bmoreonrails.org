@@ -18,11 +18,11 @@
             %li
               %a.at.icon{href: '/', title: 'Who We Are'}
             %li
-              %a.calendar.icon{href: '/', title: 'Upcoming  Events'}
+              %a.calendar.icon{href: '#calendar', title: 'Upcoming  Events'}
             %li
-              %a.twitter.icon{href: '/', title: 'Twitter'}
+              %a.twitter.icon{href: '#calendar', title: 'Twitter'}
             %li
-              %a.map.icon{href: '/', title: 'Where to Find Us'}
+              %a.map.icon{href: '#location', title: 'Where to Find Us'}
             %li#join
               %a{href: 'http://www.meetup.com/bmore-on-rails', title: 'Our Meetup Page'} Join Us on Meetup!
 
@@ -153,7 +153,7 @@
                 = image_tag 'backforty_275.png', alt: 'Back Forty Logo', class: 'logos'
       = yield
 
-      %section.mapfooter
+      %section#location.mapfooter
         %h2.map.icon
         .background
 

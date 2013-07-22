@@ -1,5 +1,6 @@
 ## README
 
+
 This is the code for the website at bmoreonrails.org. If you'd like to help out, make a change, add a feature then come to a B'more on Rails hack night!
 
 ### Setup

@@ -19,10 +19,6 @@ module BmoreonrailsOrg
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-
-    config.assets.enabled = true
-    config.assets.precompile.push *Dir[Rails.root.join('app', 'assets', 'stylesheets', '**/*.css.scss')].map {|stylesheet| File.basename(stylesheet).gsub(/\.scss/, '')}
-    config.assets.version = '1.0'
   end
 end
 

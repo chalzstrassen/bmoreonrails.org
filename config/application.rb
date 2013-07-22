@@ -21,7 +21,7 @@ module BmoreonrailsOrg
     # config.i18n.default_locale = :de
 
     config.assets.enabled = true
-    config.assets.precompile.push *Dir[Rails.root.join('app', 'assets', 'stylesheets', '**/*.css.scss')].map {|s    tylesheet| File.basename(stylesheet).gsub(/\.scss/, '')}
+    config.assets.precompile.push *Dir[Rails.root.join('app', 'assets', 'stylesheets', '**/*.css.scss')].map {|stylesheet| File.basename(stylesheet).gsub(/\.scss/, '')}
     config.assets.version = '1.0'
   end
 end

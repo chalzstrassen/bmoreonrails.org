@@ -11,6 +11,7 @@ gem 'jquery-rails'
 gem 'rails_12factor', group: :production
 
 gem 'turbolinks'
+gem 'faraday'
 
 group :doc do
   gem 'sdoc', require: false

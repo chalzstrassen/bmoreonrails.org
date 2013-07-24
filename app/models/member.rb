@@ -1,7 +1,6 @@
 require 'hashie'
 
 class Member
-  @@master_list = nil
 
   def self.list
     [
@@ -24,14 +23,4 @@ class Member
     ].map { |a| Hashie::Mash.new(:name => a[0], :github_name => a[1], :twitter => a[2], :avatar_url => a[3]) }
   end
 
-  def self.shuffle
-    @@master_list = self.list.shuffle
-  end
-
-  # Get the indexed member from the shuffled list
-  def self.member(index)
-    self.shuffle if @@master_list.nil?
-    idx = index % @@master_list.length
-    @@master_list[idx]
-  end
 end

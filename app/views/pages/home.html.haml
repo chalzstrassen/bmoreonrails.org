@@ -83,7 +83,7 @@
                 %p.address
                   = meetup.venue_name
                   &bull; #{meetup.venue_address_1}
-                %p= raw(meetup.description.truncate(300))
+                %p= meetup.clean_description.truncate(300)
 
         .column6.offset1
           %a{'href' => 'https://twitter.com/bmoreonrails', 'data-widget-id' => '357170999688577024', 'class' => 'twitter-timeline', 'data-chrome' => 'noheader nofooter noborders transparent', 'height' => mobile? ? 200 : 480, 'width' => '100%'}  Tweets by @bmoreonrails

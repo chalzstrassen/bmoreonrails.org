@@ -10,6 +10,7 @@ class Meetup < ActiveRecord::Base
         description: api_meetup['description'],
         how_to_find_us: api_meetup['how_to_find_us'],
         name: api_meetup['name'],
+        time: Time.at(api_meetup['time'].to_i/1000),
         venue_name: api_venue['name'],
         venue_address_1: api_venue['address_1'],
         venue_address_2: api_venue['address_2'],

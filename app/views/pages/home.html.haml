@@ -1,0 +1,143 @@
+%article
+  %section#team
+    #leader
+      .column5
+        = image_tag 'logomark.svg', alt: 'logo mark', id: 'logomark'
+      .column12
+        %h1
+          Bmore on Rails is a community of Baltimore folks who use the Ruby programming language and the Ruby on Rails framework.
+    .row
+      .pixel
+      .pixel
+      .pixel
+      .pixel
+      .pixel
+      .pixel
+        = image_tag 'http://placekitten.com/207/207', alt: 'kitten'
+      .pixel
+      .pixel
+        = image_tag 'http://placekitten.com/207/207', alt: 'kitten'
+      .pixel
+
+    .row
+      .pixel
+      .pixel
+        = image_tag 'http://placekitten.com/207/207', alt: 'kitten'
+      .pixel
+        = image_tag 'http://placekitten.com/207/207', alt: 'kitten'
+      .pixel
+        = image_tag 'http://placekitten.com/207/207', alt: 'kitten'
+      .pixel
+        = image_tag 'http://placekitten.com/207/207', alt: 'kitten'
+      .pixel
+        = image_tag 'http://placekitten.com/207/207', alt: 'kitten'
+      .pixel
+      .pixel
+        = image_tag 'http://placekitten.com/207/207', alt: 'kitten'
+      .pixel
+        = image_tag 'http://placekitten.com/207/207', alt: 'kitten'
+
+    .row
+      .pixel
+        = image_tag 'http://placekitten.com/207/207', alt: 'kitten'
+      .pixel
+        = image_tag 'http://placekitten.com/207/207', alt: 'kitten'
+      .pixel
+      .pixel
+        = image_tag 'http://placekitten.com/207/207', alt: 'kitten'
+      .pixel
+        = image_tag 'http://placekitten.com/207/207', alt: 'kitten'
+      .pixel
+      .pixel
+        = image_tag 'http://placekitten.com/207/207', alt: 'kitten'
+      .pixel
+      .pixel
+        = image_tag 'http://placekitten.com/207/207', alt: 'kitten'
+
+    .row
+      .pixel
+      .pixel
+      .pixel
+        = image_tag 'http://placekitten.com/207/207', alt: 'kitten'
+      .pixel
+      .pixel
+      .pixel
+      .pixel
+      .pixel
+      .pixel
+
+  #calendar
+    %section
+      .container
+        .column18.line
+          %h2.calendar.icon
+
+        .column9.offset1.push
+          - @meetups.each do |meetup|
+            .row
+              .column6
+                %h3.subspace
+                  = link_to meetup.name, meetup.event_url
+              .column12
+                %p.subtitle.space= l(meetup.time, format: :wordy)
+                %p.address
+                  = meetup.venue_name
+                  &bull; #{meetup.venue_address_1}
+                %p= raw(meetup.description.truncate(300))
+
+        .column6.offset1
+          %a{'href' => 'https://twitter.com/bmoreonrails', 'data-widget-id' => '357170999688577024', 'class' => 'twitter-timeline', 'data-chrome' => 'noheader nofooter noborders transparent', 'height' => mobile? ? 200 : 480, 'width' => '100%'}  Tweets by @bmoreonrails
+          :javascript
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs")
+
+  #sponsors
+    %section
+      .container
+        .column18.line
+          %h2.sponsors.icon
+
+        .column6.first
+          %a{href: 'http://www.mdlogix.com', title: 'mdlogix'}
+            = image_tag 'mdlogix_275.png', alt: 'mdlogix Logo', class: 'logos'
+        .column6
+          %a{href: 'http://smartlogicsolutions.com/', title: 'smartlogic'}
+            = image_tag 'smartlogic_275.png', alt: 'Smart Logic Logo', class: 'logos'
+        .column6
+          %a{href: 'http://www.inthebackforty.com/', title: 'Back Forty'}
+            = image_tag 'backforty_275.png', alt: 'Back Forty Logo', class: 'logos'
+    %section#location.mapfooter
+      %h2.map.icon
+      .background
+
+      #address
+        .row
+          .column8
+            %p
+              Meetings @ MDLogix
+              %br/
+              1216 E. Baltimore St.
+              %br/
+              Baltimore, MD 21202
+
+          .column9
+            %p
+              Hack Nights @ Beehive Baltimore
+              %br/
+              2400 Boston St. #308
+              %br/
+              Baltimore, MD 21224
+
+        .row.text
+          .column8
+            %p
+              Pub Nights @ Rye
+              %br/
+              807 S. Broadway
+              %br/
+              Baltimore, MD 21231
+
+          .column9
+            %p
+              Join Us!
+              %br/
+              %a{href: 'http://www.meetup.com/bmore-on-rails', title: 'Our Meetup Page'} meetup.com/bmore-on-rails

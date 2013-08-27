@@ -1,6 +1,10 @@
 class Meetup < ActiveRecord::Base
   UPCOMING_EVENTS_URL = 'http://api.meetup.com/2/events?group_id=347566&status=upcoming&order=time&limited_events=False&desc=false&offset=0&format=json&page=20&fields=&time=%2C5w&sig_id=9347737&sig=f6274cfd7bf5c34df7ec77400585d13b00a0666e'
 
+  def self.most_recent
+    order('time ASC').limit(3)
+  end
+
   def self.update
     fetch_upcoming_meetups.each do |api_meetup|
       api_venue = api_meetup['venue']

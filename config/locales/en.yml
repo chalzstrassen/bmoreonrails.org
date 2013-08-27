@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+  time:
+    formats:
+      wordy: '%A, %B %d @ %I:%M%p'

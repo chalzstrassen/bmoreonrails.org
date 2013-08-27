@@ -11,9 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20130827195321) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "meetups", force: true do |t|
+    t.string "remote_id",       null: false
+    t.string "event_url",       null: false
+    t.text   "description"
+    t.text   "how_to_find_us"
+    t.string "name",            null: false
+    t.string "venue_name"
+    t.string "venue_address_1"
+    t.string "venue_address_2"
+    t.string "venue_city"
+    t.string "venue_state"
+    t.string "venue_zip"
+    t.float  "venue_lon"
+    t.float  "venue_lat"
+  end
 
 end

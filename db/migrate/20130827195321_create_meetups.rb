@@ -5,6 +5,7 @@ class CreateMeetups < ActiveRecord::Migration
       t.string :event_url, null: false
       t.text :description
       t.text :how_to_find_us
+      t.datetime :time
       t.string :name, null: false
       t.string :venue_name
       t.string :venue_address_1

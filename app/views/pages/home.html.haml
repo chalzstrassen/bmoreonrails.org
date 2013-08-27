@@ -82,7 +82,8 @@
                 %p.subtitle.space= l(meetup.time, format: :wordy)
                 %p.address
                   = meetup.venue_name
-                  &bull; #{meetup.venue_address_1}
+                  &bull;
+                  = link_to meetup.venue_address_1, meetup.google_map_url
                 %p= meetup.clean_description.truncate(300)
 
         .column6.offset1

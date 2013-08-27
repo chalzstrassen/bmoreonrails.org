@@ -5,6 +5,10 @@ class Meetup < ActiveRecord::Base
     Sanitize.clean(description)
   end
 
+  def google_map_url
+    URI::encode("https://maps.google.com/maps?ie=UTF8&q=#{venue_lat},#{venue_lon}&z=18")
+  end
+
   def self.most_recent
     order('time ASC').limit(3)
   end

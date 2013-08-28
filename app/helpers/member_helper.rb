@@ -5,6 +5,8 @@ module MemberHelper
   # If we don't have twitter, but we do have their githup username,
   # make the image a link to their github page.
   def member_avatar(member)
+    return nil if member.nil?
+
     title = "#{member.name}"
     if member.twitter.present?
       url = "http://twitter.com/#{member.twitter}"

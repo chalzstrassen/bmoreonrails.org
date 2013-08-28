@@ -1,0 +1,5 @@
+- if member
+  %a{:href => "http://twitter.com/#{member.twitter}", :title => "#{member.name} (@#{member.twitter})", :target => '_blank'}
+    =image_tag "members/#{member.avatar_url}", :alt => member.name
+- else
+  %img

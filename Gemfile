@@ -13,6 +13,7 @@ gem 'rails_12factor', group: :production
 
 gem 'turbolinks'
 gem 'faraday'
+gem 'hashie'
 
 group :doc do
   gem 'sdoc', require: false

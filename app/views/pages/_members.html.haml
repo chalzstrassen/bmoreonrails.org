@@ -1,3 +1,4 @@
+- Member.shuffle
 .row
   .pixel
   .pixel
@@ -5,52 +6,52 @@
   .pixel
   .pixel
   .pixel
-    = render partial: "member_pixel", locals: {member: @member_list[0]}
+    = render partial: "member_pixel", locals: {member: Member.member(0)}
   .pixel
   .pixel
-    = render partial: "member_pixel", locals: {member: @member_list[1]}
+    = render partial: "member_pixel", locals: {member: Member.member(1)}
   .pixel
 
 .row
   .pixel
   .pixel
-    = render partial: "member_pixel", locals: {member: @member_list[2]}
+    = render partial: "member_pixel", locals: {member: Member.member(2)}
   .pixel
-    = render partial: "member_pixel", locals: {member: @member_list[3]}
+    = render partial: "member_pixel", locals: {member: Member.member(3)}
   .pixel
-    = render partial: "member_pixel", locals: {member: @member_list[4]}
+    = render partial: "member_pixel", locals: {member: Member.member(4)}
   .pixel
-    = render partial: "member_pixel", locals: {member: @member_list[5]}
+    = render partial: "member_pixel", locals: {member: Member.member(5)}
   .pixel
-    = render partial: "member_pixel", locals: {member: @member_list[6]}
+    = render partial: "member_pixel", locals: {member: Member.member(6)}
   .pixel
   .pixel
-    = render partial: "member_pixel", locals: {member: @member_list[7]}
+    = render partial: "member_pixel", locals: {member: Member.member(7)}
   .pixel
-    = render partial: "member_pixel", locals: {member: @member_list[8]}
+    = render partial: "member_pixel", locals: {member: Member.member(8)}
 
 .row
   .pixel
-    = render partial: "member_pixel", locals: {member: @member_list[9]}
+    = render partial: "member_pixel", locals: {member: Member.member(9)}
   .pixel
-    = render partial: "member_pixel", locals: {member: @member_list[10]}
-  .pixel
-  .pixel
-    = render partial: "member_pixel", locals: {member: @member_list[11]}
-  .pixel
-    = render partial: "member_pixel", locals: {member: @member_list[12]}
+    = render partial: "member_pixel", locals: {member: Member.member(10)}
   .pixel
   .pixel
-    = render partial: "member_pixel", locals: {member: @member_list[13]}
+    = render partial: "member_pixel", locals: {member: Member.member(11)}
+  .pixel
+    = render partial: "member_pixel", locals: {member: Member.member(12)}
   .pixel
   .pixel
-    = render partial: "member_pixel", locals: {member: @member_list[14]}
+    = render partial: "member_pixel", locals: {member: Member.member(13)}
+  .pixel
+  .pixel
+    = render partial: "member_pixel", locals: {member: Member.member(14)}
 
 .row
   .pixel
   .pixel
   .pixel
-    = render partial: "member_pixel", locals: {member: @member_list[15]}
+    = render partial: "member_pixel", locals: {member: Member.member(15)}
   .pixel
   .pixel
   .pixel

@@ -28,6 +28,6 @@ class Member
       ['Avdi Grimm',          '',               'avdi',           'member_57932012.jpeg'],
       ['Chase Gilliam',       '',               '',               'member_127440262.jpeg'],
       ['Josh Hepworth',       '',               'josh_hepworth',  'member_21723331.jpeg'],
-    ].map { |a| Hashie::Mash.new(:name => a[0], :github_name => a[1], :twitter => a[2], :avatar_url => a[3]) }
+    ].map { |a| Hashie::Mash.new(:name => a[0], :github_name => a[1], :twitter => a[2], :avatar_file => a[3]) }
   end
 end

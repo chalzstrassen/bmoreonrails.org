@@ -6,65 +6,13 @@
       .column12
         %h1
           Bmore on Rails is a community of Baltimore folks who use the Ruby programming language and the Ruby on Rails framework.
-    .row
-      .pixel
-      .pixel
-      .pixel
-      .pixel
-      .pixel
-      .pixel
-        = member_avatar @members.shift
-        
-      .pixel
-      .pixel
-        = member_avatar @members.shift
-      .pixel
 
-    .row
-      .pixel
-      .pixel
-        = member_avatar @members.shift
-      .pixel
-        = member_avatar @members.shift
-      .pixel
-        = member_avatar @members.shift
-      .pixel
-        = member_avatar @members.shift
-      .pixel
-      .pixel
-        = member_avatar @members.shift
-      .pixel
-        = member_avatar @members.shift
-      .pixel
-        = member_avatar @members.shift
-
-    .row
-      .pixel
-        = member_avatar @members.shift
-      .pixel
-        = member_avatar @members.shift
-      .pixel
-        = member_avatar @members.shift
-      .pixel
-        = member_avatar @members.shift
-      .pixel
-      .pixel
-        = member_avatar @members.shift
-      .pixel
-      .pixel
-        = member_avatar @members.shift
-
-    .row
-      .pixel
-      .pixel
-      .pixel
-        = member_avatar @members.shift
-      .pixel
-      .pixel
-      .pixel
-      .pixel
-      .pixel
-      .pixel
+    / Need to grab pixel_sets from shuffle_picture_helper.rb
+    - random_pixel_set.each_slice(9) do |pixes|
+      .row
+        - pixes.each do |pix|
+          .pixel
+            = image_tag @member_images.shift if pix
 
   #calendar
     %section

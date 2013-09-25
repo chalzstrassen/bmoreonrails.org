@@ -3,7 +3,7 @@ require 'hashie'
 class Member
 
   def self.list
-    MEMBER_LIST.map { |a|
+    MEMBER_CONFIG.map { |a|
       Hashie::Mash.new(:name =>        a['name'],
                        :github_name => a['github_name'],
                        :twitter =>     a['twitter'],

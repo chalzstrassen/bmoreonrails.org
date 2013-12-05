@@ -10,7 +10,7 @@ class Meetup < ActiveRecord::Base
   end
 
   def self.most_recent
-    order('time ASC').limit(3)
+    order('time DESC').limit(3)
   end
 
   def self.update

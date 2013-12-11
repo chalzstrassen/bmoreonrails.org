@@ -1,15 +1,55 @@
 #calendar {
+  #twitter.line-mobile {
+
+    @include mobile {
+      position: relative;
+      text-align: center;
+
+     &:before {
+        border-bottom: 1px solid $red;
+        content: '';
+        position: absolute;
+        top: 7%;
+        left: 0;
+        right: 0;
+      }
+
+      h2 {
+        background-color: $light;
+        color: $red;
+        display: inline-block;
+        font-size: 500%;
+        margin: 0;
+        padding: 0.5em 0.25em 0 0.25em;
+        position: relative;
+        z-index: 1;
+
+        @include mobile {
+          font-size: 400%;
+        }
+      }
+    }
+
+    .twitter {
+      display: none;
+
+      @include mobile {
+        display: inline-block;
+      }
+    }
+  }
+
   margin-top: 5em;
 
   @include mobile {
     margin-top: 1.5em;
   }
 
-  h3 {
+  h4 {
     @include mobile { padding-top: 1em; }
   }
 
-  h3 {
+  h4 {
     color: $red;
     font-family: Roboto, $sans;
     font-weight: 700;
@@ -70,9 +110,5 @@
 
   .twitter-timeline {
     padding-top: 1em;
-
-    @include mobile {
-      margin-top: 2em;
-    }
   }
 }

@@ -24,7 +24,7 @@
           - @meetups.each do |meetup|
             .row
               .column6
-                %h3.subspace
+                %h4.subspace
                   = link_to meetup.name, meetup.event_url
               .column12
                 %p.subtitle.space= l(meetup.time, format: :wordy)
@@ -34,10 +34,12 @@
                   = link_to meetup.venue_address_1, meetup.google_map_url
                 %p= meetup.clean_description.truncate(300)
 
-        .column6.offset1
-          %a{'href' => 'https://twitter.com/bmoreonrails', 'data-widget-id' => '357170999688577024', 'class' => 'twitter-timeline', 'data-chrome' => 'noheader nofooter noborders transparent', 'data-tweet-limit' => mobile? ? 3 : 5, 'width' => '100%'}  Tweets by @bmoreonrails
-          :javascript
-            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs")
+        .column6.offset1#twitter.line-mobile
+          %h2.twitter.icon
+          .column12
+            %a{'href' => 'https://twitter.com/bmoreonrails', 'data-widget-id' => '357170999688577024', 'class' => 'twitter-timeline', 'data-chrome' => 'noheader nofooter noborders transparent', 'data-tweet-limit' => mobile? ? 3 : 5, 'width' => '100%'}  Tweets by @bmoreonrails
+            :javascript
+              !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs")
 
   #sponsors
     %section

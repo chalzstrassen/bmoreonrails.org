@@ -12,7 +12,7 @@
       .row
         - pixes.each do |pix|
           .pixel
-            = image_tag @member_images.shift if pix
+            = member_avatar @members.shift if pix
 
   #calendar
     %section

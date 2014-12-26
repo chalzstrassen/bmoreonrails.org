@@ -3,12 +3,6 @@
 @import "sections/sponsors";
 @import "sections/team";
 
-.no-mobile {
-  @include mobile {
-    display: none;
-  }
-}
-
 .container {
   p {
   padding: 0em .25em 1em .25em;

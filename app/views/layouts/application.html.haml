@@ -11,31 +11,28 @@
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0, user-scalable=no'}
 
     %body
-    %header
-      .column18
-        %nav
-          %ul
-            %li
-              %a.at.icon{href: '/', title: 'Who We Are'}
-            %li
-              %a.calendar.icon{href: '#calendar', title: 'Upcoming  Events'}
-            %li
-              %a.twitter.icon{href: '#twitter', title: 'Twitter'}
-            %li
-              %a.map.icon{href: '#location', title: 'Where to Find Us'}
-            %li#join
-              %a{href: 'http://www.meetup.com/bmore-on-rails', title: 'Our Meetup Page'} Join Us on Meetup!
+      %header
+        .column18
+          %nav
+            %ul
+              = yield :section_nav
+              %li#join
+                %a{href: 'http://www.meetup.com/bmore-on-rails', title: 'Our Meetup Page'} Join Us on Meetup!
+              %li#join
+                %a{href: pages_school_path, title: 'school'} School
+              %li#join
+                %a{href: root_path, title: 'home'} Home
 
-    = yield
+      = yield
 
-    %footer
-      %p
-        &copy 2013 B'more on Rails
-        %br.mobile-only/
-        Logo by
-        %a{href: 'http://charlesmartucci.com/', title: 'Charles Martucci'} Charles Martucci/Craftwork
-        %br.mobile-only
-        %span.bullet
-          &bull;
-        Website Designed by
-        %a{href: 'http://www.inthebackforty.com/', title: 'Back Forty'} Back Forty
+      %footer
+        %p
+          &copy 2013 B'more on Rails
+          %br.mobile-only/
+          Logo by
+          %a{href: 'http://charlesmartucci.com/', title: 'Charles Martucci'} Charles Martucci/Craftwork
+          %br.mobile-only
+          %span.bullet
+            &bull;
+          Website Designed by
+          %a{href: 'http://www.inthebackforty.com/', title: 'Back Forty'} Back Forty

@@ -3,6 +3,33 @@
 @import "sections/sponsors";
 @import "sections/team";
 
+.no-mobile {
+  @include mobile {
+    display: none;
+  }
+}
+
+.container {
+  p {
+  padding: 0em .25em 1em .25em;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  h3 {
+    margin: .25em 0em;
+  }
+
+  .logo {
+    padding: 1em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 header {
   background-color: #CD2027;
   height: 5em;
@@ -60,43 +87,44 @@ header {
 article {
   }
 
-  .line {
-    // padding-bottom: 2em;
+.line {
+  padding-bottom: 1em;
+  margin: 0em .5em;
+  position: relative;
+  text-align: center;
+
+  @include mobile {
+    padding-bottom: 0;
+  }
+
+ &:before {
+    border-bottom: 1px solid $red;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+  }
+
+  h2 {
+    background-color: $light;
+    color: $red;
+    display: inline-block;
+    font-size: 500%;
+    margin: 0;
+    padding: 0 0.25em;
     position: relative;
-    text-align: center;
+    z-index: 1;
 
     @include mobile {
-      padding-bottom: 0;
-    }
-
-   &:before {
-      border-bottom: 1px solid $red;
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-    }
-
-    h2 {
-      background-color: $light;
-      color: $red;
-      display: inline-block;
-      font-size: 500%;
-      margin: 0;
-      padding: 0 0.25em;
-      position: relative;
-      z-index: 1;
-
-      @include mobile {
-        font-size: 400%;
-      }
+      font-size: 400%;
     }
   }
+}
 
-  aside {
+aside {
 
-  }
+}
 
 .mapfooter {
 

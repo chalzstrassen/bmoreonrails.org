@@ -64,41 +64,7 @@
           %a{href: 'http://smartlogicsolutions.com/', title: 'smartlogic'}
             = image_tag 'smartlogic_275.png', alt: 'Smart Logic Logo', class: 'logos'
         .column6
-          %a{href: 'http://www.inthebackforty.com/', title: 'Back Forty'}
-            = image_tag 'backforty_275.png', alt: 'Back Forty Logo', class: 'logos'
-    %section#location.mapfooter
-      %h2.map.icon
-      .background
+          %a{href: 'https://orderup.com/', title: 'OrderUp'}
+            = image_tag 'orderup_275.png', alt: 'OrderUp Logo', class: 'logos'
 
-      #address
-        .row
-          .column8
-            %p
-              Meetings @ MDLogix
-              %br/
-              1216 E. Baltimore St.
-              %br/
-              Baltimore, MD 21202
-
-          .column9
-            %p
-              Hack Nights @ DHF
-              %br/
-              1045 Light St.
-              %br/
-              Baltimore, MD 21230
-
-        .row.text
-          .column8
-            %p
-              Pub Nights @ Rye
-              %br/
-              807 S. Broadway
-              %br/
-              Baltimore, MD 21231
-
-          .column9
-            %p
-              Join Us!
-              %br/
-              %a{href: 'http://www.meetup.com/bmore-on-rails', title: 'Our Meetup Page'} meetup.com/bmore-on-rails
+    = render 'layouts/locations'

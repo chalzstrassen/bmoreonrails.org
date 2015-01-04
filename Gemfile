@@ -20,6 +20,7 @@ group :doc do
 end
 
 group :development, :test do
+  gem 'capybara'
   gem 'pry-rails'
   gem 'quiet_assets'
 end

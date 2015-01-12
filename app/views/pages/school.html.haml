@@ -20,8 +20,6 @@
             %a{href: 'https://www.google.com/maps/place/Betamore/@39.276833,-76.612088,15z/data=!4m2!3m1!1s0x0:0x6d2528150bed1e5e', title: 'At Betamore'} @ Betamore
           %p
             This two day workshop put together by the B'more on Rails crew+ is an opportunity for women to learn about the basics of Ruby on Rails. We'll guide you through building an application that's accessible through the web and backed by a database. You'll walk away with the resources and tools to continue making super rad web
-          %p
-            <a href="http://www.eventbrite.com/e/bmore-on-rails-workshop-for-women-tickets-14887807834?ref=ebtnebtckt" target="_blank"><img src="https://www.eventbrite.com/custombutton?eid=14887807834" alt="Eventbrite - B’more on Rails | Workshop for Women" /></a>
           %h3
             Friday Installfest
           %p
@@ -59,10 +57,24 @@
             5:00pm - 7:00pm | Afterparty
           %p
             After the workshop, take some time to relax and hang with the local Rails community. Venue (TBD).
+          %div.sign-up-links
+            %ul
+              %li
+                %span
+                  Attendees
+                %a{href: "http://www.eventbrite.com/e/bmore-on-rails-workshop-for-women-tickets-14887807834?ref=ebtnebtckt", target: "_blank"}
+                  = image_tag "https://www.eventbrite.com/custombutton?eid=14887807834", alt: "Eventbrite - B’more on Rails | Workshop for Women"
+              %li
+                %span
+                  Coaches
+                %a{href: "http://www.eventbrite.com/e/bmore-on-rails-workshop-for-women-tickets-14887807834?ref=ebtnebtckt", target: "_blank"}
+                  = image_tag "https://www.eventbrite.com/custombutton?eid=14887807834", alt: "Eventbrite - B’more on Rails | Workshop for Women"
 
         .column6.line-mobile
           .line
             %h2.sponsors.icon
+          %a{href: 'https://www.traitify.com/', title: 'traitify'}
+            = image_tag 'traitify_logo_blue.png', class: 'logo'
           %a{href: 'http://smartlogicsolutions.com/', title: 'smartlogic'}
             = image_tag 'smartlogic_275.png', alt: 'Smart Logic Logo', class: 'logo'
           %a{href: 'http://betamore.com/', title: 'betamore'}

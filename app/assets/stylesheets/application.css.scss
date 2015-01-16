@@ -17,10 +17,23 @@
   }
 
   .logo {
+    margin: 2em auto;
     padding: 1em;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+  }
+
+  .border-text {
+    position: absolute;
+    margin: -17px 0px 0px 17px;
+    background-color: #fff;
+  }
+
+  .logo-border {
+    margin: 0px;
+    border-style: dotted;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: $red;
   }
 
   .sign-up-links {

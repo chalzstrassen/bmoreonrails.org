@@ -1,6 +1,8 @@
 class Meetup < ActiveRecord::Base
   UPCOMING_EVENTS_URL = 'http://api.meetup.com/2/events?group_id=347566&status=upcoming&order=time&limited_events=False&desc=false&offset=0&format=json&page=20&fields=&time=%2C5w&sig_id=9347737&sig=f6274cfd7bf5c34df7ec77400585d13b00a0666e'
 
+  scope :upcoming, -> { where('time > now()') }
+
   def clean_description
     return '' unless description
     Sanitize.clean(description)
@@ -8,10 +10,6 @@ class Meetup < ActiveRecord::Base
 
   def google_map_url
     URI::encode("https://maps.google.com/maps?ie=UTF8&q=#{venue_lat},#{venue_lon}&z=18")
-  end
-
-  def self.most_recent
-    order('time DESC').limit(3)
   end
 
   def self.update

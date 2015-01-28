@@ -20,7 +20,6 @@ The member list is in `config/members.yml`. To add yourself to the list, append 
   github_name: 'your_github_handle'
   twitter:     'your_twitter_handle'
   avatar_file: 'your_avatar.jpg'
-  list_weight: 0.3
 ```
 
 The `avatar_file` field is a 200x200-pixel picture of you. If you have ImageMagick installed, you can find a command to resize your image in the ["Convert member images to square thumbnails"](https://github.com/bmoreonrails/bmoreonrails.org#convert-member-images-to-square-thumbnails) section at the bottom of this README.
@@ -38,3 +37,7 @@ The site is deployed to Heroku, contact a B'more on Rails organizer to be added 
 This command requires that you have ImageMagick installed on your machine. If you are on OS X and you have [Homebrew](http://brew.sh) installed, you can run `brew install imagemagick` to install ImageMagick to get this command. On Linux, you can install it with your distribution's package manager.
 
     for f in `ls -1 *.jpeg`; do convert -define jpeg:size=200x200 $f -thumbnail 200x200^ -gravity center -extent 200x200 app/assets/images/members/$f ; done
+
+To resize one image:
+
+    convert -define jpeg:size=200x200 original_avatar.jpg -thumbnail 200x200^ -gravity center -extent 200x200  your_avatar.jpg

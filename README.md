@@ -7,6 +7,15 @@ This is the code for the website at bmoreonrails.org. If you'd like to help out,
 
 * Install ruby 2.0
 * `bundle install`
+* `touch config/database.yml`
+* Add the code below to your database.yml
+```
+  development:
+  adapter:  postgresql
+  encoding: unicode
+  host:     localhost
+  database: bmoreonrails_development
+```
 * `rake db:create db:migrate`
 * success!
 

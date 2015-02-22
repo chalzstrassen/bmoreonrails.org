@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '~> 4.0.0'
 gem 'pg'
 gem 'haml-rails'
+gem 'redcarpet'
 
 gem 'sass-rails', '~> 4.0.0'
 gem 'sanitize'
